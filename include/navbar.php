@@ -19,7 +19,7 @@ header('Content-type: text/html; charset=utf-8');
                     </li>
                 <?php else : ?>
                     <li><a href="deconnect.php">Deconexion</a>
-                        <a href="include/formADMIN.php">
+                        <a href="admin.php">
                             <h4> Bonjour <?php echo $_SESSION['username'] ?></h4>
                         </a>
                     </li>

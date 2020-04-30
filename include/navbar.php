@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 header('Content-type: text/html; charset=utf-8');
 ?>
 <nav class="navbar px-md-0 navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -19,7 +19,7 @@ header('Content-type: text/html; charset=utf-8');
                     </li>
                 <?php else : ?>
                     <li><a href="deconnect.php">Deconexion</a>
-                        <a href="admin.php">
+                        <a href="include/auth.php">
                             <h4> Bonjour <?php echo $_SESSION['username'] ?></h4>
                         </a>
                     </li>

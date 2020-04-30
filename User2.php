@@ -37,6 +37,7 @@ class User2
 
         $this->email = $donnee['email'];
         $id_user = $donnee['id_user'];
+        $id_typeuser = $donnee['id_typeuser'];
         $count = $req->rowCount();
 
         if ($count > 0) {
@@ -49,6 +50,7 @@ class User2
                 $_SESSION['validation_token'] = $this->valid;
                 $_SESSION['email'] = $this->email;
                 $_SESSION['id_user'] = $id_user;
+                $_SESSION['id_typeuser'] = $id_typeuser;
                 header("location:index.php");
             } else {
                 echo "verifiez la confirmation de votre adresse mail <br>";

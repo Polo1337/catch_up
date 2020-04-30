@@ -38,9 +38,10 @@ class User
             $req->execute([$this->email]);
             $count = $req->rowCount();
             if ($count == 0) {
-                $req = $bdd->prepare("INSERT INTO user SET username = ?, email = ?, mdp = ?, validation_token = ?, id_typeuser = 2");
+                $req = $bdd->prepare("INSERT INTO user SET username = ?, email = ?, mdp = ?, validation_token = ?, id_typeuser = 1");
                 $req->execute([$this->username, $this->email, $this->mdp, $this->token]);
                 echo "Inscription reussie <br> verifiez votre mail";
+                echo '<a href="index.php">Retournez a lacceuil</a>';
                 // envoyer le mail (a faire)
             } else {
                 echo "mail deja pris";
